@@ -1,0 +1,197 @@
+<!-- Home Page Component -->
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Discover Art, Embrace Creativity</h1>
+    <p>Unique paintings and handcrafted pots for your home.</p>
+    <a routerLink="/shop" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<!-- Featured Collections -->
+<section class="featured">
+  <section class="about-section">
+    <div class="container">
+      <div class="content">
+        <!-- Left Image -->
+        <div class="image">
+          <img src="../../../assets/images/a1.jpeg" alt="Painting 1">
+        </div>
+  
+        <!-- Center Text Content -->
+        <div class="text">
+          <h2>Discover Our Essence</h2>
+          <p>
+            At Artmart, we are passionate art enthusiasts dedicated to connecting artists and collectors
+            through dynamic and exciting auctions. Our platform celebrates the creativity and diversity
+            of artists from around the world, providing a space where their works can be appreciated
+            and acquired by.
+          </p>
+          <ul>
+            <li>✔ <strong>Integrity</strong></li>
+            <li>✔ <strong>Diversity</strong></li>
+            <li>✔ <strong>Accessibility</strong></li>
+            <li>✔ <strong>Enthusiasts</strong></li>
+            <li>✔ <strong>Collectors</strong></li>
+            <li>✔ <strong>Support</strong></li>
+          </ul>
+        </div>
+  
+        <!-- Right Image -->
+        <div class="image">
+          <img src="../../../assets/images/a2.jpg" alt="Painting 2">
+        </div>
+      </div>
+  
+      
+  
+      <!-- Learn More Button -->
+      <button class="learn-more">Learn More</button>
+    </div>
+  </section>
+  
+</section>
+
+<!-- Categories Section -->
+<section class="categories">
+  <section class="special-section">
+    <div class="container">
+      <!-- Left Content -->
+      <div class="content">
+        <h2>What Makes Us Special</h2>
+        <p>
+          An unparalleled art auction experience where quality, integrity, and passion for art come together.
+        </p>
+        <div class="features">
+          <div class="feature-item">
+            <span class="icon">🤝</span>
+            <div>
+              <h3>Support Artists</h3>
+              <p>Supporting their creative endeavors helps them continue to produce extraordinary works.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="icon">🔒</span>
+            <div>
+              <h3>Secure Transactions</h3>
+              <p>We connect artists and collectors from around the world.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="icon">🖥️</span>
+            <div>
+              <h3>User-Friendly Platform</h3>
+              <p>Our website is designed for ease of use.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <span class="icon">🌍</span>
+            <div>
+              <h3>Seamless Experience</h3>
+              <p>We connect artists and collectors from around the world.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Right Image -->
+      <div class="image">
+        <img src="../../../assets/images/a4.webp" alt="Special Artwork">
+      </div>
+    </div>
+  </section>
+  
+</section>
+
+<!-- Testimonials Section -->
+<section class="testimonials">
+  <h2>What Our Customers Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial" *ngFor="let review of testimonials">
+      <div class="testimonial-card">
+        <div class="quote">❝</div>
+        <p class="testimonial-text">"{{ review.text }}"</p>
+        <h4 class="testimonial-author">- {{ review.author }}</h4>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- About the Artists -->
+<section class="about">
+  
+  <section class="gallery">
+    <h2>Art Gallery</h2>
+    <div class="grid">
+      <!-- Add image paths directly in the HTML -->
+      <div class="grid-item">
+        <img src="../.././../assets/images/bg2.webp" alt="Artwork 1" onclick="openLightbox(this)">
+      </div>
+      <div class="grid-item">
+        <img src="../.././../assets/images/p1.jpg" alt="Artwork 2" onclick="openLightbox(this)">
+      </div>
+      <div class="grid-item">
+        <img src="../.././../assets/images/bg2.webp" alt="Artwork 3" onclick="openLightbox(this)">
+      </div>
+      <div class="grid-item">
+        <img src="../.././../assets/images/p2.jpg" alt="Artwork 4" onclick="openLightbox(this)">
+      </div>
+      <div class="grid-item">
+        <img src="../.././../assets/images/s1.jpg" alt="Artwork 5" onclick="openLightbox(this)">
+      </div>
+      <div class="grid-item">
+        <img src="../.././../assets/images/p3.webp" alt="Artwork 6" onclick="openLightbox(this)">
+      </div>
+    </div>
+  
+    <!-- Lightbox (Popup Image) -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+      <img id="lightboxImg" alt="Large View">
+    </div>
+  </section>
+  
+</section>
+
+
+
+<!-- Footer Section -->
+<footer>
+  <div class="newsletter">
+    <section class="contact">
+      <div class="contact-container">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <h2>Get in Touch</h2>
+          <p>We'd love to hear from you! Reach out to us for any inquiries or support.</p>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>SAVITRIBAI PHULE MAHILA MAHAVIDYALAYA SATARA</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <span>+91 98765 43210</span>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <!-- <span>support@artmarket.com</span> -->
+          </div>
+        </div>
+    
+        <!-- Social Media Links -->
+        <div class="social-media">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="../../../assets/images/if1.webp"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+</footer>
+
