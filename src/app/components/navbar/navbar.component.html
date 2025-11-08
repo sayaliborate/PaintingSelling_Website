@@ -1,0 +1,83 @@
+<nav class="navbar">
+  <div class="logo">
+    <span>Art & Pots</span>
+  </div>
+
+  <ul class="nav-links" [class.active]="menuOpen">
+    <li><a routerLink="/">Home</a></li>
+    <!-- <li><a routerLink="/shop">Gallery</a></li> -->
+    <li class="dropdown" (click)="toggleDropdown()">
+      <a >Gallery <span class="arrow">&#9662;</span></a>
+      <ul class="dropdown-menu" [class.show]="submenuOpen">
+         <li><a routerLink="/shop">Indian Art</a></li>
+
+          <!-- <li><a routerLink="/indian-art">Indian Art</a></li> -->
+          <!-- <li><a routerLink="/home-dec">Home Decore</a></li>
+          <li><a routerLink="/modern-art">Modern art</a></li> -->
+      </ul>
+  </li>
+
+
+
+    <li><a routerLink="/about">About</a></li>
+    <li><a routerLink="/contact">Contact</a></li>
+
+    <!-- Show Register only if NOT logged in -->
+    <li *ngIf="!isLoggedIn"><a routerLink="/register">Register</a></li>
+    <li *ngIf="!isLoggedIn"><a routerLink="/feedback">Feedback</a></li>
+
+    <!-- Customer Panel (Only for Logged-in Users) -->
+    <ng-container *ngIf="isLoggedIn && !isAdminLoggedIn">
+      <li><a routerLink="/artist-login">Upload Image</a></li>
+      <li><a routerLink="/dashboard">Dashboard</a></li>
+      <li><a routerLink="/orders">My Orders</a></li>
+      <li><a routerLink="/feedback-retrive">Feedback Retrive</a></li>
+      <li><a routerLink="/admin-dashboard">Manage Orders</a></li>
+
+    </ng-container>
+
+    <!-- Admin Panel (Only for Admin Users) -->
+    <ng-container *ngIf="isAdminLoggedIn">
+      <li><a routerLink="/admin-dashboard">Manage Orders</a></li>
+      <li><a routerLink="/manage-users">Manage Users</a></li>
+      <li><a routerLink="/admin-dashboard1">Reports</a></li>
+    </ng-container>
+  </ul>
+
+  <div class="nav-icons">
+    <a routerLink="/cart"><i class="fas fa-shopping-cart"></i></a>
+    <a routerLink="/profile"><i class="fas fa-user"></i></a>
+    <button class="menu-toggle" (click)="toggleMenu()">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- ✅ Show Login button if NOT logged in -->
+  <button *ngIf="!isLoggedIn && !isAdminLoggedIn" class="login-btn" (click)="loginAsArtist()">
+    Login
+  </button>
+
+  <!-- ✅ Show Admin Login when an artist is logged in -->
+  <button *ngIf="isLoggedIn && !isAdminLoggedIn" class="admin-login-btn" (click)="showAdminLogin = !showAdminLogin">
+    Admin Login
+  </button>
+
+  <!-- ✅ Admin Login Form (Only If Not Already Admin) -->
+ <!-- Admin Login Popup -->
+<!-- Admin Login Popup -->
+<div *ngIf="showAdminLogin" class="admin-login-overlay">
+  <div class="admin-login-box">
+    <span class="close-btn" (click)="showAdminLogin = false">&times;</span>
+    <h3>Admin Access</h3>
+    <input type="text" [(ngModel)]="adminUsername" placeholder="👤 Admin Username" />
+    <input type="password" [(ngModel)]="adminPassword" placeholder="🔒 Password" />
+    <button (click)="adminLogin()">Login as Admin</button>
+  </div>
+</div>
+
+
+  <!-- ✅ Show Logout button if logged in -->
+  <button *ngIf="isLoggedIn || isAdminLoggedIn" class="logout-btn" (click)="logout()">
+    <i class="fas fa-sign-out-alt"></i> Logout
+  </button>
+</nav>

@@ -1,0 +1,55 @@
+<div class="painting-list-container">
+  <h2>Available Paintings</h2>
+
+  <p *ngIf="errorMessage" class="error">{{ errorMessage }}</p>
+
+  <div class="painting-card" *ngFor="let painting of paintings; let i = index">
+    <img [src]="painting.image" alt="{{ painting.title }}" />
+    
+    <!-- Buy Now button -->
+    <button (click)="toggleOrderForm(i)">Buy Now</button>
+
+    <h3>{{ painting.title }}</h3>
+    <p>Price: ₹{{ painting.price }}</p>
+
+    <!-- Order form shown only if this painting's form is open -->
+    <div *ngIf="showOrderFormIndex === i" class="order-form">
+      <form (ngSubmit)="placeOrder(painting.id)" #orderForm="ngForm">
+        <label>
+          Full Name:
+          <input type="text" name="fullName" [(ngModel)]="orderData.fullName" required />
+        </label><br />
+
+        <label>
+          Address:
+          <textarea name="address" [(ngModel)]="orderData.address" required></textarea>
+        </label><br />
+
+        <label>
+          Phone:
+          <input type="text" name="phone" [(ngModel)]="orderData.phone" required />
+        </label><br />
+
+        <label>
+          Quantity:
+          <input type="number" name="quantity" [(ngModel)]="orderData.quantity" min="1" required />
+        </label><br />
+
+        <label>
+          Payment Method:
+          <select name="paymentMethod" [(ngModel)]="orderData.paymentMethod" required>
+            <option value="COD">Cash On Delivery</option>
+            <option value="Online">Online Payment</option>
+          </select>
+        </label><br />
+
+        <button type="submit" [disabled]="orderForm.invalid">Place Order</button>
+      </form>
+
+      <!-- <p *ngIf="messageIndex === i && message" style="color: green;">{{ message }}</p>
+      <p *ngIf="errorIndex === i && error" style="color: red;">{{ error }}</p> -->
+    </div>
+  </div>
+
+  <p *ngIf="paintings.length === 0">No paintings found.</p>
+</div>

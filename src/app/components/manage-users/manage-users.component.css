@@ -1,0 +1,76 @@
+.user-table {
+    margin-top: 20px;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  h2 {
+    font-size: 26px;
+    color: #444;
+    margin-bottom: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+  
+  /* Table Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header */
+  thead {
+    background: linear-gradient(135deg, #ff99cc, #ff6699); /* Gradient Header */
+    color: white;
+  }
+  
+  th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  /* Alternating Row Colors */
+  tbody tr:nth-child(even) {
+    background: rgba(255, 235, 238, 0.3);
+  }
+  
+  tbody tr:nth-child(odd) {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  /* Hover Effect */
+  tbody tr:hover {
+    background: rgba(255, 182, 193, 0.4); /* Soft Pink Hover */
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+  }
+  
+  /* Column Titles */
+  th {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* Text Color */
+  td {
+    color: #444;
+    font-size: 16px;
+  }
+  
+  /* Responsive Table */
+  @media (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+    th, td {
+      padding: 10px;
+    }
+  }
+  

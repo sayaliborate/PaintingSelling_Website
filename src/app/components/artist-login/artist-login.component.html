@@ -1,0 +1,45 @@
+<div class="upload-container">
+  <h2>Upload Painting</h2>
+
+  <form (submit)="onSubmit(); $event.preventDefault()">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        id="title"
+        [(ngModel)]="title"
+        name="title"
+        required
+        placeholder="Enter painting title"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price:</label>
+      <input
+        type="number"
+        id="price"
+        [(ngModel)]="price"
+        name="price"
+        required
+        placeholder="Enter painting price"
+        min="0"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="image">Image:</label>
+      <input type="file" id="image" (change)="onFileSelected($event)" accept="image/*" required />
+    </div>
+
+    <div *ngIf="previewImage" class="image-preview">
+      <p>Preview:</p>
+      <img [src]="previewImage" alt="Image preview" />
+    </div>
+
+    <button type="submit">Upload Painting</button>
+  </form>
+
+  <p class="success" *ngIf="uploadSuccessMessage">{{ uploadSuccessMessage }}</p>
+  <p class="error" *ngIf="uploadErrorMessage">{{ uploadErrorMessage }}</p>
+</div>

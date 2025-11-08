@@ -1,0 +1,19 @@
+<div class="feedback-container">
+    <form (ngSubmit)="onSubmit()" #feedbackForm="ngForm">
+      <h2>📝 Share Your Feedback</h2>
+  
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="feedback.name" required>
+  
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" [(ngModel)]="feedback.email" required>
+  
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" [(ngModel)]="feedback.message" required></textarea>
+  
+      <button type="submit" [disabled]="!feedbackForm.form.valid">Submit</button>
+  
+      <p *ngIf="submitted" class="success-message">🎉 Thank you for your feedback!</p>
+    </form>
+  </div>
+  

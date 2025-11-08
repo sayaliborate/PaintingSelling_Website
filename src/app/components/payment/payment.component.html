@@ -1,0 +1,25 @@
+<div class="payment-container">
+    <h2>Complete Your Purchase</h2>
+  
+    <div class="product-preview">
+      <img [src]="product.image" alt="Product Image">
+      <h3>{{ product.name }}</h3>
+      <p>Price: ₹{{ product.price }}</p>
+    </div>
+  
+    <h3>Select Payment Method</h3>
+    <div class="payment-options">
+      <label>
+        <input type="radio" name="payment" value="card" checked> Credit/Debit Card
+      </label>
+      <label>
+        <input type="radio" name="payment" value="upi"> UPI / Google Pay
+      </label>
+      <label>
+        <input type="radio" name="payment" value="cod"> Cash on Delivery (COD)
+      </label>
+    </div>
+  
+    <button class="pay-btn" (click)="processPayment()">Pay Now 💳</button>
+  </div>
+  

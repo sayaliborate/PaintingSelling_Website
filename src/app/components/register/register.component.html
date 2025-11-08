@@ -1,0 +1,28 @@
+<div class="register-container">
+  <div class="register-card">
+    <h2>Sign Up</h2>
+    <p>Create an account and start your journey!</p>
+
+    <form (ngSubmit)="onSubmit()">
+      <div class="input-group">
+        <input type="text" id="username" [(ngModel)]="Register.username" name="username" placeholder="Username" required />
+      </div>
+
+      <div class="input-group">
+        <input type="text" id="name" [(ngModel)]="Register.name" name="name" placeholder="Full Name" required />
+      </div>
+
+      <div class="input-group">
+        <input type="email" id="email" [(ngModel)]="Register.email" name="email" placeholder="Email Address" required />
+      </div>
+
+      <div class="input-group">
+        <input type="password" id="password" [(ngModel)]="Register.password" name="password" placeholder="Password" required />
+      </div>
+
+      <button type="submit">Create Account</button>
+
+      <p class="login-text">Already have an account? <a href="#">Login</a></p>
+    </form>
+  </div>
+</div>

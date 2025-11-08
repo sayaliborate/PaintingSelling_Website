@@ -1,0 +1,52 @@
+<div class="dashboard-container">
+  <h2 class="dashboard-title">Dashboard</h2>
+
+  <!-- Summary Cards -->
+  <div class="summary-cards">
+    <div class="card">
+      <h3>Total Paintings</h3>
+      <p>{{ totalPaintings }}</p>
+    </div>
+    <div class="card">
+      <h3>Total Orders</h3>
+      <p>{{ totalOrders }}</p>
+    </div>
+    <div class="card">
+      <h3>Pending Orders</h3>
+      <p>{{ pendingOrders }}</p>
+    </div>
+    <div class="card">
+      <h3>Delivered Orders</h3>
+      <p>{{ deliveredOrders }}</p>
+    </div>
+  </div>
+
+  <!-- Recent Orders -->
+  <div class="recent-orders">
+    <h4>Recent Orders</h4>
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>Order ID</th>
+          <th>Painting</th>
+          <th>Customer</th>
+          <th>Status</th>
+          <th>Ordered On</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of recentOrders">
+          <td>{{ order.id }}</td>
+          <td>{{ order.painting.title }}</td>
+          <td>{{ order.full_name }}</td>
+          <td>
+            <span class="status-badge" [ngClass]="'status-' + order.status">
+              {{ order.status }}
+            </span>
+          </td>
+          <td>{{ order.order_date | date: 'short' }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

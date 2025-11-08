@@ -1,0 +1,111 @@
+/* 💖 Full-page background with gradient */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 💎 Login Card */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 400px;
+  transition: transform 0.3s ease;
+}
+
+.login-card:hover {
+  transform: translateY(-5px);
+}
+
+/* 💕 Title & Subtitle */
+h2 {
+  color: #d63384;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* 🖋️ Input Fields */
+.input-group {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #555;
+  font-size: 14px;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+  outline: none;
+  background: #fafafa;
+}
+
+input:focus {
+  border-color: #ff69b4;
+  box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+}
+
+/* ✨ Login Button */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #ff69b4, #ff1493);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(to right, #ff1493, #ff69b4);
+  transform: scale(1.05);
+}
+
+/* 🎀 Register Text */
+.register-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.register-text a {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}

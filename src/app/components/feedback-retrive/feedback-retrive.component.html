@@ -1,0 +1,32 @@
+<div class="feedback-container">
+    <h2>Feedbacks</h2>
+  
+    <!-- Loading spinner -->
+    <div *ngIf="isLoading" class="loading">Loading feedbacks...</div>
+  
+    <!-- Error message -->
+    <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  
+    <!-- Display feedback list in table -->
+    <div *ngIf="!isLoading && !errorMessage">
+      <table class="feedback-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Message</th>
+            <th>Submitted At</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let feedback of feedbacks">
+            <td>{{ feedback.name }}</td>
+            <td>{{ feedback.email }}</td>
+            <td>{{ feedback.message }}</td>
+            <td>{{ feedback.created_at | date: 'medium' }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
