@@ -36,8 +36,7 @@ This project is suitable for learning and demonstrating real-world web developme
 ## 🖼️ Screenshots
 
 ### 🏠 Home Page
-![Home Page](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a31d48c8-448d-4156-9ce5-9c3464b582ee" />
-)
+![Home Page](Screenshot 2026-01-13 134238.png)
 
 ### 🎨 Paintings List
 ![Paintings](screenshots/paintings.png)
