@@ -36,8 +36,7 @@ This project is suitable for learning and demonstrating real-world web developme
 ## 🖼️ Screenshots
 
 ### 🏠 Home Page
-![Home Page](<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/580f18c8-9784-4a02-947f-ac103c27a858" />
-)
+![Home Page](https://github.com/sayaliborate/PaintingSelling_Website/blob/main/Screenshot%202026-01-13%20134238.png?raw=true)
 
 ### 🎨 Paintings List
 ![Paintings](screenshots/paintings.png)
