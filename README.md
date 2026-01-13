@@ -38,8 +38,8 @@ This project is suitable for learning and demonstrating real-world web developme
 ### 🏠 Home Page
 ![Home Page](https://github.com/sayaliborate/PaintingSelling_Website/blob/main/Screenshot%202026-01-13%20134238.png?raw=true)
 
-### 🎨 Paintings List
-![Paintings](screenshots/paintings.png)
+### 🎨 Feedbacks
+![Paintings]([screenshots/paintings.png](https://raw.githubusercontent.com/sayaliborate/PaintingSelling_Website/48105bf61430b327365549610efc927cd4d34964/Screenshot%202026-01-13%20134330.png))
 
 ### 🔐 Login Page
 ![Login](screenshots/login.png)
